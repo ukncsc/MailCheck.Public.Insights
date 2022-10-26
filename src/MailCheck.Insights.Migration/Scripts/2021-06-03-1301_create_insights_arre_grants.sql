@@ -1,0 +1,1 @@
+﻿GRANT SELECT, INSERT, UPDATE ON `aggregate_report_record_enriched` TO '{env}-insights-data-saver' IDENTIFIED BY '{password}'

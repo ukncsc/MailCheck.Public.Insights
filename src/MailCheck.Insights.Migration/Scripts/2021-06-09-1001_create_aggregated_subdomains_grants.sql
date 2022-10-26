@@ -1,0 +1,1 @@
+﻿GRANT SELECT, INSERT, UPDATE ON `aggregated_subdomains` TO '{env}-insights-data-saver' IDENTIFIED BY '{password}'

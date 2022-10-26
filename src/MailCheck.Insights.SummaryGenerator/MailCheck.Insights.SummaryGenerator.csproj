@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <AWSProjectType>Lambda</AWSProjectType>
+        <ApplicationIcon />
+        <OutputType>Exe</OutputType>
+        <StartupObject>MailCheck.Insights.SummaryGenerator.LocalEntryPoint</StartupObject>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.Core" Version="2.0.0" />
+        <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="2.0.0" />
+        <PackageReference Include="Dapper" Version="2.0.35" />
+        <PackageReference Include="MailCheck.Common.Contracts" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Data" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Messaging" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Util" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Data" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Processors" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.SSM" Version="12.0.0" />
+        <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\MailCheck.Insights.Contracts\MailCheck.Insights.Contracts.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="InsightGenerators\Abuse\EvaluationRules\AbuseInsightRulesMarkdownResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AbuseInsightRulesMarkdownResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="InsightGenerators\Abuse\EvaluationRules\AbuseInsightRulesResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>AbuseInsightRulesResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="InsightGenerators\Abuse\AbuseInsightGeneratorDaoResources.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>AbuseInsightGeneratorDaoResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Configuration\ConfigurationInsightGeneratorResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ConfigurationInsightGeneratorResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Configuration\EvaluationRules\PolicyMixed\PolicyMixedResources.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>PolicyMixedResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="InsightGenerators\Configuration\EvaluationRules\PolicyNoneProvidersResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>PolicyNoneResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Configuration\EvaluationRules\ConfigurationTableFactoryResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ConfigurationTableFactoryResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Configuration\EvaluationRules\PolicyQuarReject\PolicyQuarRejectRes.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>PolicyQuarRejectRes.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Configuration\EvaluationRules\PolicyNone\PolicyNoneResources.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>PolicyNoneResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Subdomains\EvaluationRules\SubdomainsRulesMarkdownResource.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SubdomainsRulesMarkdownResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Subdomains\EvaluationRules\SubdomainsRulesResource.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SubdomainsRulesResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="InsightGenerators\Subdomains\SubdomainsInsightGeneratorResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SubdomainsInsightGeneratorResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="InsightGenerators\Abuse\AbuseInsightGeneratorDaoResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AbuseInsightGeneratorDaoResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Abuse\EvaluationRules\AbuseInsightRulesMarkdownResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AbuseInsightRulesMarkdownResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Abuse\EvaluationRules\AbuseInsightRulesResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AbuseInsightRulesResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Configuration\ConfigurationInsightGeneratorResources.Designer.cs">
+        <DependentUpon>ConfigurationInsightGeneratorResources.resx</DependentUpon>
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+      </Compile>
+      <Compile Update="InsightGenerators\Configuration\EvaluationRules\ConfigurationTableFactoryResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ConfigurationTableFactoryResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Configuration\EvaluationRules\PolicyMixed\PolicyMixedResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PolicyMixedResources.resx</DependentUpon>
+      </Compile>
+      <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="InsightGenerators\Configuration\EvaluationRules\PolicyNoneProvidersResources.Designer.cs">
+        <DependentUpon>PolicyNoneResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Configuration\EvaluationRules\PolicyNone\PolicyNoneResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PolicyNoneResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Configuration\EvaluationRules\PolicyQuarReject\PolicyQuarRejectRes.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>PolicyQuarRejectRes.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Subdomains\EvaluationRules\SubdomainsRulesMarkdownResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SubdomainsRulesMarkdownResource.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Subdomains\EvaluationRules\SubdomainsRulesResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SubdomainsRulesResource.resx</DependentUpon>
+      </Compile>
+      <Compile Update="InsightGenerators\Subdomains\SubdomainsInsightGeneratorResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SubdomainsInsightGeneratorResources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="ProviderRules.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>

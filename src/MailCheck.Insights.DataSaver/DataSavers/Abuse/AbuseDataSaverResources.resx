@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="InsertAbuseData" xml:space="preserve">
+    <value>
+INSERT INTO `insights`.`aggregated_abuse`
+  (`domain`, `reverse_domain`, `effective_date`, `count`, `flagged`, `p`, `pct`, `record_count`)
+SELECT
+  @domain, @ReverseDomain, @EffectiveDate, @count, @flagged, @p, @pct, 1
+WHERE NOT EXISTS
+(  
+  SELECT 1 FROM `insights`.`aggregate_report_record_enriched` 
+  WHERE `reverse_domain` = @ReverseDomain AND `effective_date` = @EffectiveDate AND `record_id` = @RecordId
+  LIMIT 1
+)
+ON DUPLICATE KEY UPDATE 
+  flagged=flagged + @flagged,
+  count=count + @count,
+  record_count = record_count + 1
+</value>
+  </data>
+</root>

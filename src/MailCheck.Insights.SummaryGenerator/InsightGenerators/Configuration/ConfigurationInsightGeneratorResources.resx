@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="GetSummaryDataRaw" xml:space="preserve">
+    <value>
+    SELECT
+        `domain`,
+        `effective_date` EffectiveDate,
+        `arc`,
+        `bounce_reflector_blocklist_count` BounceReflectorBlockListCount,
+        `count`,
+        `disposition`,
+        `dkim`,
+        `dkim_auth_results` DkimAuthResults,
+        `dkim_fail_count` DkimFailCount,
+        `dkim_pass_count` DkimPassCount,
+        `domain_from` DomainFrom,
+        `end_user_blocklist_count` EndUserBlockListCount,
+        `end_user_network_blocklist_count` EndUserNetworkBlockListCount,
+        `hijacked_network_blocklist_count` HijackedNetworkBlockListCount,
+        `host_name` Hostname,
+        `host_provider` HostProvider,
+        `malware_blocklist_count` MalwareBlockListCount,
+        `p`,
+        `pct`,
+        `proxy_blocklist_count` ProxyBlockListCount,
+        `record_id` RecordId,
+        `spam_source_blocklist_count` SpamSourceBlockListCount,
+        `spf`,
+        `spf_auth_results` SpfAuthResults,
+        `spf_fail_count` SpfFailCount,
+        `spf_pass_count` SpfPassCount,
+        `suspicious_network_blocklist_count` SuspiciousNetworkBlockListCount
+    FROM
+        insights.aggregate_report_record_enriched
+    WHERE
+        reverse_domain = @reverseDomain and
+        effective_date BETWEEN @startDate AND @endDate
+    ORDER BY effective_date ASC
+    </value>
+  </data>
+</root>

@@ -1,0 +1,8 @@
+{
+  "providerAliases": [
+    {
+      "provider": "testProvider",
+      "mapping": "testAlias"
+    }
+  ]
+}

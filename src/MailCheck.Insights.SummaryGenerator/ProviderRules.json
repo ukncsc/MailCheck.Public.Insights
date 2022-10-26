@@ -1,0 +1,228 @@
+{
+    "providerAliases": [
+        {
+            "provider": "outlook.com",
+            "mapping": "Microsoft Office 365"
+        },
+        {
+            "provider": "Unrouted",
+            "mapping": "Unrouted - Prefix not advertised to the internet"
+        },
+        {
+            "provider": "",
+            "mapping": "Provider lookup failed"
+        },
+        {
+            "provider": "google.com",
+            "mapping": "Google"
+        },
+        {
+            "provider": "mimecast.com",
+            "mapping": "Mimecast"
+        },
+        {
+            "provider": "amazonses.com",
+            "mapping": "Amazon SES"
+        },
+        {
+            "provider": "sendgrid.net",
+            "mapping": "Sendgrid"
+        },
+        {
+            "provider": "zdsys.com",
+            "mapping": "Zendesk"
+        },
+        {
+            "provider": "mailgun.net",
+            "mapping": "Mailgun (mailgun.net)"
+        },
+        {
+            "provider": "mailgun.us",
+            "mapping": "Mailgun (mailgun.us)"
+        },
+        {
+            "provider": "createsend.com",
+            "mapping": "Campaign Monitor (createsend.com)"
+        },
+        {
+            "provider": "messagelabs.com",
+            "mapping": "MessageLabs / Symantec"
+        },
+        {
+            "provider": "constantcontact.com",
+            "mapping": "Constant contact"
+        },
+        {
+            "provider": "govdelivery.com",
+            "mapping": "Gov Delivery Granicus"
+        },
+        {
+            "provider": "sender-sib.com",
+            "mapping": "Sendinblue (sender-sib.com)"
+        },
+        {
+            "provider": "mailin.fr",
+            "mapping": "Sendinblue (mailin.fr)"
+        },
+        {
+            "provider": "wpmhost.net",
+            "mapping": "WPM Education"
+        },
+        {
+            "provider": "exlibrisgroup.com",
+            "mapping": "Ex Libris"
+        },
+        {
+            "provider": "mailjet.com",
+            "mapping": "MailJet"
+        },
+        {
+            "provider": "blackbaud.com",
+            "mapping": "Blackbaud (blackbaud.com)"
+        },
+        {
+            "provider": "blackbaud.net",
+            "mapping": "Blackbaud (blackbaud.net)"
+        },
+        {
+            "provider": "pd25.com",
+            "mapping": "Pardot (pd25.com)"
+        },
+        {
+            "provider": "ondemand.com",
+            "mapping": "SAP Cloud (ondemand.com)"
+        },
+        {
+            "provider": "newzapp.co.uk",
+            "mapping": "NewZapp  Communications"
+        },
+        {
+            "provider": "trendmicro.eu",
+            "mapping": "Trend Micro"
+        },
+        {
+            "provider": "midlandhr.co.uk",
+            "mapping": "Midland HR"
+        },
+        {
+            "provider": "nw007.com",
+            "mapping": "Poppulo (formerly Newsweaver)"
+        },
+        {
+            "provider": "mtasv.net",
+            "mapping": "Postmark (mtasv.net)"
+        },
+        {
+            "provider": "qemailserver.com",
+            "mapping": "Qualtrics (qemailserver.com)"
+        },
+        {
+            "provider": "askadmissionmail.co.uk",
+            "mapping": "ApplyYourself by Campus Mgmt (askadmissionmail.co.uk)"
+        },
+        {
+            "provider": "iphmx.com",
+            "mapping": "Cisco's Ironport Cloud email service (iphmx.com)"
+        },
+        {
+            "provider": "bmsend.com",
+            "mapping": "Benchmark Email (bmsend.com)"
+        },
+        {
+            "provider": "salesforce.com",
+            "mapping": "Salesforce"
+        },
+        {
+            "provider": "pphosted.com",
+            "mapping": "Proofpoint (pphosted.com)"
+        },
+        {
+            "provider": "electric.net",
+            "mapping": "Vipre Email Security (electric.net)"
+        },
+        {
+            "provider": "mailcontrol.com",
+            "mapping": "Forcepoint (mailcontrol.com)"
+        },
+        {
+            "provider": "pb-dynmktge.com",
+            "mapping": "Microsoft Dynamics 365 (pb-dynmktge.com)"
+        },
+        {
+            "provider": "pur3.net",
+            "mapping": "Pure360 (pur3.net)"
+        },
+        {
+            "provider": "1e100.net",
+            "mapping": "Google (1e100.net)"
+        },
+        {
+            "provider": "kundenserver.de",
+            "mapping": "1&1 (kundenserver.de)"
+        },
+        {
+            "provider": "yahoo.com",
+            "mapping": "Yahoo"
+        },
+        {
+            "provider": "as9143.net",
+            "mapping": "Virgin Media (as9143.net)"
+        },
+        {
+            "provider": "secureserver.net",
+            "mapping": "GoDaddy (secureserver.net)"
+        },
+        {
+            "provider": "btinternet.com",
+            "mapping": "BT Mail"
+        },
+        {
+            "provider": "mailcore.me",
+            "mapping": "123 Reg (mailcore.me)"
+        },
+        {
+            "provider": "livemail.co.uk",
+            "mapping": "Fasthosts (livemail.co.uk)"
+        },
+        {
+            "provider": "hostedemail.com",
+            "mapping": "OpenSRS (Tucows) (hostedemail.com)"
+        },
+        {
+            "provider": "me.com",
+            "mapping": "Apple iCloud (me.com)"
+        },
+        {
+            "provider": "talktalk.net",
+            "mapping": "TalkTalk"
+        },
+        {
+            "provider": "tiscali.co.uk",
+            "mapping": "Tiscali"
+        },
+        {
+            "provider": "hosts.co.uk",
+            "mapping": "Namesco (hosts.co.uk)"
+        },
+        {
+            "provider": "stackmail.com",
+            "mapping": "20i email (stackmail.com)"
+        },
+        {
+            "provider": "plus.net",
+            "mapping": "Plusnet"
+        },
+        {
+            "provider": "gandi.net",
+            "mapping": "Gandi"
+        },
+        {
+            "provider": "dreamhost.com",
+            "mapping": "DreamHost"
+        },
+        {
+            "provider": "pobox.com",
+            "mapping": "Pobox/Fastmail/Mailstore"
+        }
+    ]
+}

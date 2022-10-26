@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Scripts\2021-06-02_0000_create_insights_entity_table.sql" />
+      <None Remove="Scripts\2021-06-02_1200_create_insights_entity_grants.sql" />
+      <None Remove="Scripts\2021-06-03-1300_create_insights_arre_table.sql" />
+      <None Remove="Scripts\2021-06-03-1301_create_insights_arre_grants.sql" />
+      <None Remove="Scripts\2021-06-04-1700_create_aggregated_configuration_table.sql" />
+      <None Remove="Scripts\2021-06-04-1701_create_aggregated_configuration_grants.sql" />
+      <None Remove="Scripts\2021-08-06-1600_add_suspicious_network_column.sql" />
+      <None Remove="Scripts\everytime\grants.sql" />
+      <None Remove="Scripts\2021-06-08-1649_create_aggregated_abuse_table.sql" />
+      <None Remove="Scripts\2021-06-08-1652_create_aggregated_abuse_grants.sql" />
+      <None Remove="Scripts\2021-06-09-1000_create_aggregated_subdomains_table.sql" />
+      <None Remove="Scripts\2021-06-09-1001_create_aggregated_subdomains_grants.sql" />
+      <None Remove="Scripts\2021-06-10-1200_add_record_count_column.sql" />
+      <None Remove="Scripts\2021-06-15-1105_add_dmarc_passed_count_column.sql" />
+      <None Remove="Scripts\2021-06-17-1000_modify_p_column.sql" />
+      <None Remove="Scripts\2021-06-25-1535_add_hostname_column.sql" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Scripts\2021-06-02_1200_create_insights_entity_grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-04-1701_create_aggregated_configuration_grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-04-1700_create_aggregated_configuration_table.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-03-1301_create_insights_arre_grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-03-1300_create_insights_arre_table.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-02_0000_create_insights_entity_table.sql" />
+      <EmbeddedResource Include="Scripts\2021-08-06-1600_add_suspicious_network_column.sql" />
+      <EmbeddedResource Include="Scripts\everytime\grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-08-1649_create_aggregated_abuse_table.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-08-1652_create_aggregated_abuse_grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-09-1000_create_aggregated_subdomains_table.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-09-1001_create_aggregated_subdomains_grants.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-10-1200_add_record_count_column.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-15-1105_add_dmarc_passed_count_column.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-17-1000_modify_p_column.sql" />
+      <EmbeddedResource Include="Scripts\2021-06-25-1535_add_hostname_column.sql" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="MailCheck.Common.Data.Migration" Version="12.0.0" />
+      <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.22" />
+      <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+</Project>

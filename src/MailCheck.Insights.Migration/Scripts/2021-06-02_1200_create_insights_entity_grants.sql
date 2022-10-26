@@ -1,0 +1,1 @@
+﻿GRANT SELECT, INSERT, UPDATE ON `insights_entity` TO '{env}-insights-ent' IDENTIFIED BY '{password}'

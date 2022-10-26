@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <AWSProjectType>Lambda</AWSProjectType>
+        <ApplicationIcon />
+        <OutputType>Exe</OutputType>
+        <StartupObject>MailCheck.Insights.DataSaver.LocalEntryPoint</StartupObject>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.Core" Version="2.0.0" />
+        <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="2.0.0" />
+        <PackageReference Include="Dapper" Version="2.0.35" />
+        <PackageReference Include="MailCheck.Common.Contracts" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Messaging" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Util" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.Data" Version="12.0.0" />
+        <PackageReference Include="MailCheck.Common.SSM" Version="12.0.0" />
+        <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="DataSavers\RawDataSaverResouces.Designer.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Update="DataSavers\Abuse\AbuseDataSaverResources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>AbuseDataSaverResources.resx</DependentUpon>
+        </Compile>
+        <Compile Update="DataSavers\Configuration\ConfigurationDataSaverResources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ConfigurationDataSaverResources.resx</DependentUpon>
+        </Compile>
+        <Compile Update="DataSavers\Raw\RawDataSaverResources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>RawDataSaverResources.resx</DependentUpon>
+        </Compile>
+        <Compile Update="DataSavers\Subdomains\SubdomainDataSaverResources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>SubdomainDataSaverResources.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="DataSavers\Abuse\AbuseDataSaverResources.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>AbuseDataSaverResources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="DataSavers\Configuration\ConfigurationDataSaverResources.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>ConfigurationDataSaverResources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="DataSavers\Raw\RawDataSaverResources.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>RawDataSaverResources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="DataSavers\Subdomains\SubdomainDataSaverResources.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>SubdomainDataSaverResources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\MailCheck.Insights.Contracts\MailCheck.Insights.Contracts.csproj" />
+    </ItemGroup>
+</Project>

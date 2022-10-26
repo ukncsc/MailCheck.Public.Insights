@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Test1Advisory1Txt" xml:space="preserve">
+        <value>Mail Check identified that 100% of your email traffic is failing SPF and DKIM checks, related to configuration issues with 1 email sending system(s)</value>
+    </data>
+    <data name="Test1Advisory1MD" xml:space="preserve">
+        <value>**Systems that need configuring with SPF or DKIM:**
+
+| Email provider | Configuration advice |
+|---|---|
+|Google|This could be either a) G suite (if you use this) b) Google Groups c) forwarded emails via Gmail etc.|
+
+
+---
+
+**Important Note**
+
+This is a new feature with Mail Check analysing your DMARC reporting and producing the deductions above. Caveats as follows:
+- Due to particular system limitations, it may not be possible to configure SPF and DKIM for every provider. It is best to apply both, but you can still pass a DMARC check with either just SPF or DKIM.
+- Mail Check may not be listing all your systems. Mail Check only lists systems that contribute &gt; 10 emails and &gt; 1% of your total emails in the last 30 days, so you should still [review your DMARC reporting](https://www.mailcheck.service.ncsc.gov.uk/app/domain-security/test.gov.uk/custom/0001-01-01/9999-12-31/false/emailtraffic), to see if there are any further lower volume systems that need configuring with SPF and DKIM.
+- You may have fixed an issue listed above, but because Mail Check is reviewing emails for the last 30 days, this will still remain on the list for a short period.</value>
+  </data>
+  <data name="Test3Advisory1Txt" xml:space="preserve">
+        <value>Mail Check has identified that 100% of your emails are passing DMARC, so you are ready (or nearly ready) to upgrade your DMARC policy to 'quarantine'</value>
+  </data>
+  <data name="Test3Advisory1MD" xml:space="preserve">
+    <value>Looking at your DMARC reporting in the last 30 days, 100% of your emails are passing DMARC. Note this applies to emails from testDomain but not sub-domains (see separate DMARC Insights).
+
+**You should start considering how and when you will move to a DMARC policy of ‘Quarantine’**
+
+A DMARC policy of quarantine will ensure that malicious spoofed emails that fail SPF and DKIM checks are sent to Junk folders.
+
+You should consider the following:
+
+- Are all your email sending systems* on testDomain configured with SPF and/or DKIM?
+  
+  - If yes, then you can proceed with moving your policy to ‘quarantine’
+    
+  - If no, then continue to configure SPF and DKIM first before moving to a policy of quarantine
+    
+- Are your sub-domain traffic passing DMARC and ready for a quarantine policy too?
+  
+  - If yes, then you can apply a policy of quarantine (p=quarantine) that applies to example.gov.uk and any sub-domains
+    
+  - If no, then you should keep your sub-domains on a policy of ‘none’. To do this you will need to include both ‘p=quarantine’ and ‘sp=none’ in your policy, where sp=none keeps your sub-domains with a DMARC policy of none for the time being.
+    
+- Have you read [our guidance](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)? This covers considerations about how to engage stakeholders and ‘dial up’ to a full quarantine policy.
+  
+
+***Note:** DMARC Insights only highlights systems that contribute &gt; 10 emails and &gt; 1% of overall traffic per month, so you should consider checking [your DMARC reporting]({4}/app/domain-security/{1}/custom/{2:yyyy-MM-dd}/{3:yyyy-MM-dd}/false/emailtraffic) if there are lower volume systems that still might need to be configured.</value>
+  </data>
+  <data name="Test4Advisory1Txt" xml:space="preserve">
+        <value>Mail Check has identified that 96.55% of your emails are passing DMARC, so you are ready (or nearly ready) to upgrade your DMARC policy to 'quarantine'</value>
+  </data>
+  <data name="Test4Advisory1MD" xml:space="preserve">
+    <value>Looking at your DMARC reporting in the last 30 days, 96.55% of your emails are passing DMARC. Note this applies to emails from testDomain but not sub-domains (see separate DMARC Insights).
+
+**You should start considering how and when you will move to a DMARC policy of ‘Quarantine’**
+
+A DMARC policy of quarantine will ensure that malicious spoofed emails that fail SPF and DKIM checks are sent to Junk folders.
+
+You should consider the following:
+
+- Are all your email sending systems* on testDomain configured with SPF and/or DKIM?
+  
+  - If yes, then you can proceed with moving your policy to ‘quarantine’
+    
+  - If no, then continue to configure SPF and DKIM first before moving to a policy of quarantine
+    
+- Are your sub-domain traffic passing DMARC and ready for a quarantine policy too?
+  
+  - If yes, then you can apply a policy of quarantine (p=quarantine) that applies to example.gov.uk and any sub-domains
+    
+  - If no, then you should keep your sub-domains on a policy of ‘none’. To do this you will need to include both ‘p=quarantine’ and ‘sp=none’ in your policy, where sp=none keeps your sub-domains with a DMARC policy of none for the time being.
+    
+- Have you read [our guidance](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)? This covers considerations about how to engage stakeholders and ‘dial up’ to a full quarantine policy.
+  
+
+***Note:** DMARC Insights only highlights systems that contribute &gt; 10 emails and &gt; 1% of overall traffic per month, so you should consider checking [your DMARC reporting]({4}/app/domain-security/{1}/custom/{2:yyyy-MM-dd}/{3:yyyy-MM-dd}/false/emailtraffic) if there are lower volume systems that still might need to be configured.</value>
+  </data>
+  <data name="Test4Advisory2Txt" xml:space="preserve">
+    <value>Mail Check identified that 3.45% of your email traffic is failing SPF and DKIM checks, related to configuration issues with 1 email sending system(s)</value>
+  </data>
+  <data name="Test4Advisory2MD" xml:space="preserve">
+    <value>**Well configured systems that are passing DMARC.**
+
+- test.com
+- test2.com
+
+---
+**Systems that need configuring with SPF or DKIM:**
+
+| Email provider | Configuration advice |
+|---|---|
+|Google|This could be either a) G suite (if you use this) b) Google Groups c) forwarded emails via Gmail etc.|
+
+
+---
+
+**Important Note**
+
+This is a new feature with Mail Check analysing your DMARC reporting and producing the deductions above. Caveats as follows:
+- Due to particular system limitations, it may not be possible to configure SPF and DKIM for every provider. It is best to apply both, but you can still pass a DMARC check with either just SPF or DKIM.
+- Mail Check may not be listing all your systems. Mail Check only lists systems that contribute over 10 emails and over 1% of your total emails in the last 30 days, so you should still [review your DMARC reporting](https://www.mailcheck.service.ncsc.gov.uk/app/domain-security/test.gov.uk/custom/0001-01-01/9999-12-31/false/emailtraffic), to see if there are any further lower volume systems that need configuring with SPF and DKIM.
+- You may have fixed an issue listed above, but because Mail Check is reviewing emails for the last 30 days, this will still remain on the list for a short period.</value>
+  </data>
+  <data name="Test5Advisory1Txt" xml:space="preserve">
+        <value>Mail Check has not detected any systems that need configuring with SPF and DKIM</value>
+  </data>
+  <data name="Test5Advisory1MD" xml:space="preserve">
+    <value>Mail Check has not detected any systems that need configuring with SPF and DKIM
+
+Mail Check won't have detected any systems with low volumes, contributing &#60;1% of your overall email traffic.
+
+You may want to review your DMARC reporting to check if there are any further systems that need configuring.
+  
+[Review email traffic marked as quarantined](https://www.mailcheck.service.ncsc.gov.uk/app/domain-security/test.gov.uk/custom/0001-01-01/9999-12-31/false/emailtraffic?categoryFilter=quarantined)</value>
+  </data>
+  <data name="Test6Advisory1Txt" xml:space="preserve">
+        <value>Mail Check has detected 1 system(s) that might be legitimate for you to review that is failing SPF and DKIM, and therefore being sent to Junk or blocked altogether</value>
+  </data>
+  <data name="Test6Advisory1MD" xml:space="preserve">
+    <value>You have a DMARC policy of quarantine or reject, which means emails from test.gov.uk that fail SPF and DKIM will be sent to Junk or blocked altogether.
+    
+However, Mail Check detected 1 system(s) that might be legitimate that are failing SPF and DKIM:
+
+test.com
+
+[Go to Email Traffic page for test.gov.uk](https://www.mailcheck.service.ncsc.gov.uk/app/domain-security/test.gov.uk/custom/0001-01-01/9999-12-31/false/emailtraffic)
+
+You either need to configure the system(s) with SPF and/or DKIM, or if the system is not approved for use in your organisation, you will need to notify the relevant team to use an approved alternative.</value>
+  </data>
+  <data name="Test7Advisory1Txt" xml:space="preserve">
+        <value>Mail Check has detected 2 system(s) that might be legitimate for you to review that is failing SPF and DKIM, and therefore being sent to Junk or blocked altogether</value>
+  </data>
+  <data name="Test7Advisory1MD" xml:space="preserve">
+    <value>You have a DMARC policy of quarantine or reject, which means emails from test.gov.uk that fail SPF and DKIM will be sent to Junk or blocked altogether.
+    
+However, Mail Check detected 2 system(s) that might be legitimate that are failing SPF and DKIM:
+
+test.com
+test2.com
+
+[Go to Email Traffic page for test.gov.uk](https://www.mailcheck.service.ncsc.gov.uk/app/domain-security/test.gov.uk/custom/0001-01-01/9999-12-31/false/emailtraffic)
+
+You either need to configure the system(s) with SPF and/or DKIM, or if the system is not approved for use in your organisation, you will need to notify the relevant team to use an approved alternative.</value>
+  </data>
+</root>
